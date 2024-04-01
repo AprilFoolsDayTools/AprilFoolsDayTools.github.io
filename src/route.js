@@ -15,7 +15,7 @@ const routeList = [
     { category: 'DC騙圖產生器', url: '/fakeimg' },
 ]
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: routes,
 });
 

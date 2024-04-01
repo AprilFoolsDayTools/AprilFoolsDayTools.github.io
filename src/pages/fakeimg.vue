@@ -1,7 +1,7 @@
 <script setup>
   import { ref } from 'vue'
   import html2canvas from 'html2canvas'
-  const previewImage = ref('/src/img/user.png');
+  const previewImage = ref('/img/user.png');
   const num = ref(1);
   const cir = ref(false);
   const laftBtn = ref(false);
