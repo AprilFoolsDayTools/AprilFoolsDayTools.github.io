@@ -1,0 +1,44 @@
+$redSize: 48px;
+$redBefore: 2rem;
+$redPosition: 8px;
+$fontSize: 20px;
+
+.ts-image {
+    background-color: transparent;
+    .red {
+        transform: scale(0.9);
+        position: absolute;
+        bottom: -4px;
+        right: 0;
+        width: $redSize;
+        height: $redSize;
+        background-color: #1e1f21;
+        color: white;
+        z-index: 9;
+        border-radius: 100rem;
+        text-align: center;
+
+        .font {
+            position: absolute;
+            font-size: $fontSize;
+            font-weight: bold;
+            bottom: $redPosition;
+            right: $redPosition;
+            width: $redBefore;
+            height: $redBefore;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: $redBefore;
+            height: $redBefore;
+            bottom: $redPosition;
+            right: $redPosition;
+            background-color: #d75a5c;
+            border-radius: 100rem;
+            font-size: $fontSize;
+            font-weight: bold;
+        }
+    }
+}

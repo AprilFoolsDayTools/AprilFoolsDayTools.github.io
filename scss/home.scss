@@ -1,0 +1,59 @@
+* {
+    user-select: none;
+}
+
+html,
+body {
+    height: auto;
+}
+
+:root {
+    --main-color: #ff7b1b;
+}
+
+.ts-image,
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+.gap-0 {
+    gap: 0;
+}
+
+#notify {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0.4rem;
+}
+
+button,
+a {
+    &.ts-text {
+        &.is-undecorated:hover::before {
+            box-shadow: 0 0 1px 1px var(--ts-gray-50);
+        }
+    }
+    &.router-link-active::before {
+        box-shadow: 0 0 1px 1px var(--ts-gray-50) !important;
+    }
+}
+.ts-dropdown {
+    a {
+        &.item:hover {
+            color: var(--ts-gray-700);
+        }
+        &.router-link-active,
+        &.router-link-active:hover {
+            color: var(--ts-gray-75);
+            background-color: var(--ts-gray-700);
+        }
+    }
+}
+
+.ts-text {
+    &.router-link-active::before {
+        box-shadow: 0 0 1px 1px var(--ts-gray-50);
+    }
+}
