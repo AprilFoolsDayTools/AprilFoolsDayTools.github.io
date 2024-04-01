@@ -1,14 +1,13 @@
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import Home from '@/pages/home.vue'
 import FakeImg from '@/pages/fakeimg.vue'
-import error from '@/pages/error.vue'
 
 const routes = [
     { path: '/', name: 'index', redirect: '/home' },
     { path: '/home', name: 'home', component: Home, title: '首頁' },
     { path: '/fakeimg', name: 'fakeimg', component: FakeImg, title: 'DC騙圖產生器' },
-    { path: '/page/:has?', name: 'notfond', component: error },
-    { path: '/:pathMatch(.*)*', name: '404', component: error },
+    { path: '/page/:has?', name: 'notfond', component: Home },
+    { path: '/:pathMatch(.*)*', name: '404', component: Home },
 ]
 
 const routeList = [
