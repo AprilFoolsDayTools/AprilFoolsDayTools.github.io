@@ -1,29 +1,22 @@
-* {
-    user-select: none;
-}
-
 .head {
     position: sticky;
     top: 0;
     z-index: 9;
+    background-color: var(--ts-gray-50);
 }
 
-.navbar {
-    &.is-undecorated:hover {
-        text-decoration: none;
-    }
+.is-undecorated:hover {
+    text-decoration: none;
+}
 
-    &.router-link-active::before {
-        box-shadow: 0 0 1px 1px var(--ts-gray-500);
-    }
-
-    &.router-link-active {
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: -0.3rem;
-            width: 100%;
-        }
+a.ts-text.is-undecorated:hover,
+.router-link-active {
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -0.3rem;
+        width: 100%;
+        box-shadow: 0 0 1px 1px #ff5f5f;
     }
 }
 

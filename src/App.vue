@@ -8,7 +8,8 @@
   <div class="tablet+:ts-container mobile-:is-fluid">
     <div class="tablet+ts-content is-vertically-padded">
       <headpage />
-      <div class="ts-segment has-top-spaced-large">
+      <div class="tablet+:ts-divider has-vertically-spaced"></div>
+      <div class="mobile-:ts-content">
         <router-view></router-view>
       </div>
     </div>

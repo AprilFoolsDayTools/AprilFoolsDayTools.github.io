@@ -29,17 +29,8 @@
     </div>
     <div class="column"> </div>
   </div>
-  <div class="mobile-:has-hidden">
-    <div class="ts-divider is-section"></div>
-    <div class="ts-grid is-evenly-divided">
-      <div class="column is-center-aligned" v-for="nav in navBar" v-show="nav.title != undefined">
-        <router-link class="ts-text is-undecorated is-secondary" :to="nav.path">{{nav.title}}</router-link>
-      </div>
-    </div>
-  </div>
 
-
-  <div class="navbar head">
+  <div class="navbar head tablet+:has-vertically-padded">
     <div class="ts-grid is-center-aligned mobile-:has-hidden">
       <div class="column" v-for="ro in routeList">
         <router-link class="ts-text is-undecorated" v-if="ro.pathlist == undefined" :to="ro.url"
@@ -96,7 +87,6 @@
   <button class="ts-button is-icon is-circular top-btn" @click="scrollTop()">
     <span class="ts-icon is-chevron-up-icon"></span>
   </button>
-
 </template>
 
 <style src="@/css/header.css" scoped></style>
