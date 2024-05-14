@@ -1,5 +1,5 @@
 <script setup>
-  import { ref } from 'vue'
+  import { ref, watch } from 'vue'
   import html2canvas from 'html2canvas'
   const previewImage = ref('/img/user.png');
   const num = ref(1);
@@ -28,6 +28,21 @@
       a.click();
     })
   };
+
+  watch(num, (n, o) => {
+    if (n != '') {
+      num.value = parseInt(n)
+      if (num.value > 99) {
+        num.value = 99
+      }
+      if (num.value < 0) {
+        num.value = 0
+      }
+    } else {
+      num.value = 0
+    }
+  })
+
   const calculator = (type) => {
     num.value = parseInt(num.value);
     if (type == 'add') {
@@ -69,7 +84,7 @@
       </div>
       <span class="ts-text is-label has-top-spaced-small">顯示數字</span>
       <div class="ts-input has-top-spaced-small">
-        <input type="number" v-model="num">
+        <input type="text" v-model="num">
       </div>
       <div class="has-top-spaced-small">
         <button class="ts-button is-outlined is-small" @click="calculator('min')">
