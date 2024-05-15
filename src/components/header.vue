@@ -30,7 +30,7 @@
     <div class="column"> </div>
   </div>
 
-  <div class="navbar head tablet+:has-vertically-padded">
+  <div class="navbar head tablet+:has-vertically-padded-small">
     <div class="ts-grid is-center-aligned mobile-:has-hidden">
       <div class="column" v-for="ro in routeList">
         <router-link class="ts-text is-undecorated" v-if="ro.pathlist == undefined" :to="ro.url"
